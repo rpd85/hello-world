@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head>
+<h1>Hello World from <span id="hostname"></span></h1>
+    <script>
+	document.getElementById("hostname").textContent = location.hostname;
+    </script>
+<h1>
     <title>Display Date</title>
-</head>
-<body>
     <p id="date"></p>
     <script>
-        const now = new Date();
+	const now = new Date();
         const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
         const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
         const formattedDate = `Today is ${daysOfWeek[now.getDay()]}, ${months[now.getMonth()]} ${now.getDate()}, ${now.getFullYear()}`;
         document.getElementById("date").textContent = formattedDate;
     </script>
-</body>
+</h1>
 </html>
